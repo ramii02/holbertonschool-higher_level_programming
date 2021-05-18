@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" The module is used intro to classes """
+""" the procedure of this module is the beginning of classes """
 
 
 class Square:
