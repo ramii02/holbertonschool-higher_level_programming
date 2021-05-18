@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-""" This classes and completed all the module """
+""" The module is used intro to classes """
 
 
 class Square:
-    """ Creates an object of a square Classes """
-
+    """Creates object of a Square Class"""
     pass
