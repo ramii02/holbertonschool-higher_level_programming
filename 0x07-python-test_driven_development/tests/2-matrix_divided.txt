@@ -1,0 +1,85 @@
+  
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> z = [[1, 2, 3], [4, 5, 6]]
+>>> y = [1, [2, 3], [4, 5]]
+>>> x = [[1, 2], [4, 5, 6]]
+>>> n = [[4.2, 9.32, -1.43], [8.82, -0.01, -17.23]]
+>>> matrix_divided(n, 3)
+[[1.4, 3.11, -0.48], [2.94, -0.0, -5.74]]
+
+>>> matrix_divided(z, 3.133)
+[[0.32, 0.64, 0.96], [1.28, 1.6, 1.92]]
+
+>>> matrix_divided(z, -0.2)
+[[-5.0, -10.0, -15.0], [-20.0, -25.0, -30.0]]
+
+>>> matrix_divided(y, 3)
+Traceback (most recent call last):
+TypeError: object of type 'int' has no len()
+
+>>> matrix_divided(z, -12)
+[[-0.08, -0.17, -0.25], [-0.33, -0.42, -0.5]]
+
+>>> matrix_divided(z, -4.32)
+[[-0.23, -0.46, -0.69], [-0.93, -1.16, -1.39]]
+
+>>> matrix_divided(z, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+>>> matrix_divided(x, 2.3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+---------------------------------------------------------------
+
+Now use it:
+
+    >>> matrix = [ 
+    ...     [1, 2, 3], 
+    ...     [4, 5, 6] 
+    ... ] 
+
+    >>> tester.matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+    >>> tester.matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+    >>> tester.matrix_divided(matrix, "hola")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+    >>> matrix = [ 
+    ...     [1, 2, 3], 
+    ...     [4, 5, 'n'] 
+    ... ]   
+
+    >>> tester.matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [ 
+    ...     [1, 2, 3], 
+    ...     [4, 5, 6, 7, 8] 
+    ... ]
+
+    >>> tester.matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+    >>> tester.matrix_divided([[3, 8], [12, 11]], -3)
+    [[-1.0, -2.67], [-4.0, -3.67]]
+
+    >>> tester.matrix_divided(None, 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    
+    >>> tester.matrix_divided([[-1.0, -2.67], [-4.0, -3.67]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
+
+    >>> tester.matrix_divided(None, None)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
