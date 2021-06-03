@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" read from a file and prints it to stdout """
+""" read and prints it to stdout """
 
 
 def read_file(filename=""):
+    """ read and prints to stdout """
     with open(filename, 'r') as f:
-        print(f.read(), end="")
+        print(f.read(), end="
