@@ -3,6 +3,6 @@
 
 
 def read_file(filename=""):
-    """ read and prints to stdout """
+    """ Write a function that reads a text file """
     with open(filename, 'r') as f:
         print(f.read(), end="
