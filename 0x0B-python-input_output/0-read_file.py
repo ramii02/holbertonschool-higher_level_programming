@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" read and prints it to stdout """
+""" prints it to stdout """
 
 
 def read_file(filename=""):
-    """ Write a function that reads a text file """
-    with open(filename, 'r') as f:
-        print(f.read(), end="
+    """ reads the whooole file """
+    with open(filename, encoding='utf-8') as a_file:
+        print(a_file.read(), end="")
