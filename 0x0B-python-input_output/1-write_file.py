@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" writes a string to a text file """
+""" read from a file per lines """
 
 
 def number_of_lines(filename=""):
-    """ returns the number of characters written """
+    """ reads each line of a file """
     n_lines = 0
     with open(filename, encoding='utf-8') as a_file:
         for a_line in a_file:
