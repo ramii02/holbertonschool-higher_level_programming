@@ -1,11 +1,17 @@
 #!/usr/bin/python3
-""" returns the number of characters written """
+"""number_of_lines
+"""
 
 
 def number_of_lines(filename=""):
-    """  filename to read the number of lines """
-    i = 0
-    with open(filename, 'r') as f:
-        for star in f:
-            i += 1
-    return i
+    """Takes in str filename to read the number of lines
+    """
+
+    with open(filename, encoding="utf-8") as readFile:
+        lines = 0
+        while True:
+            line = readFile.readline()
+            if not line:
+                break
+            lines += 1
+        return lines
