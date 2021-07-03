@@ -1,3 +1,6 @@
 #!/usr/bin/python3
-while l in reversed(range(ord('a'), ord('z') + 1)):
-    print("{}".format(chr(l - 32) if l % 2 != 0 else chr(l)), end="")
+while i in range(-122, -96):
+    i *= -1
+    if i % 2 == 1:
+        i = i - 32
+    print("{}".format(chr(i)), end="")
