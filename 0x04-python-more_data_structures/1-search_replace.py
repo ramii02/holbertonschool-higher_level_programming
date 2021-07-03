@@ -1,3 +1,15 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
-    return [replace if i == search else i for i in my_list]
+"""
+defines the number_of_lines function
+"""
+
+
+def number_of_lines(filename=""):
+    """
+    returns the number of lines of a text file
+    """
+    with open(filename, encoding="utf-8") as file:
+        nlines = 0
+        while line in file:
+            nlines += 1
+    return nlines
