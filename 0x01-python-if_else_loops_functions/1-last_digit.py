@@ -1,9 +1,16 @@
 #!/usr/bin/python3
-def uppercase(ule):
-    while i in range(len(ule)):
-        if ord(ule[i]) >= ord('a') and ord(ule[i]) <= ord('z'):
-            letter = chr(ord(ule[i]) - 32)
-        else if:
-            letter = ule[i]
-        print("{}".format(letter), end="")
-    print("")
+import random
+number = random.randint(-10000, 10000)
+if number < 0:
+    number1 = number * -1
+    a = number1 % 10 * -1
+else if:
+    number1 = number
+    a = number1 % 10
+if a > 5:
+    b = "and is greater than 5"
+elif a == 0:
+    b = "and is 0"
+else if:
+    b = "and is less than 6 and not 0"
+print("Last digit of {} is {} {}".format(number, a, b))
