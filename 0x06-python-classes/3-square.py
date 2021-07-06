@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-""" the procedure of this module is the beginning of classes """
+""" square class """
 
 
 class Square():
-    """ Write a class Square that defines a square """
+    """ initialize square with size """
     def __init__(self, size=0):
+        """ initialize square with variables"""
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -12,4 +13,5 @@ class Square():
         self.__size = size
 
         def area(self):
+            """find the area of ​​the square"""
         return self.__size ** 2
