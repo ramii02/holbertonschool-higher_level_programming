@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-import random
-number = random.randint(-10000, 10000)
-grater_5 = "and is greater than 5"
-zero = "and is 0"
-less_6 = "and is less than 6 and not 0"
-print("Last digit of", end=" ")
-if (number % 10 > 5):
-    print("{} is {} {}".format(number, number % 10, grater_5))
-elif (number % 10 == 0):
-    print("{} is {} {}".format(number, number % 10, zero))
-elif (number < 0):
-    print("{} is -{} {}".format(number, (number * -1) % 10, less_6))
-else:
-    print("{} is {} {}".format(number, number % 10, less_6))
+def uppercase(ule):
+    while i in range(len(ule)):
+        if ord(ule[i]) >= ord('a') and ord(ule[i]) <= ord('z'):
+            letter = chr(ord(ule[i]) - 32)
+        else if:
+            letter = ule[i]
+        print("{}".format(letter), end="")
+    print("")
