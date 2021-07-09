@@ -9,11 +9,11 @@ def say_my_name(first_name, last_name=""):
     ln = 0
     if type(first_name) is str:
         fn = 1
-    else if not isinstance(first_name, str):
+    elif not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
     if type(last_name) is str:
         ln = 1
-    else if not isinstance(last_name, str):
+    elif not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
     if fn == 1 and ln == 0:
