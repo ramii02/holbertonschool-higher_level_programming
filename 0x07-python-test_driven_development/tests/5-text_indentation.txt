@@ -1,0 +1,13 @@
+``text_indentation`` module
+===========================
+
+Using ``text_indentation``
+--------------------------
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("My name is Yashey. Whats yours?")
+My name is Yashey.
+<BLANKLINE>
+Whats yours?
+<BLANKLINE>
