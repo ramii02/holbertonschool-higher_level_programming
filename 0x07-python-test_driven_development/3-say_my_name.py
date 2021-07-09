@@ -18,5 +18,5 @@ def say_my_name(first_name, last_name=""):
 
     if fn == 1 and ln == 0:
         print("My name is {} ".format(first_name))
-    elif:
+    else:
         print("My name is {} {}".format(first_name, last_name))
