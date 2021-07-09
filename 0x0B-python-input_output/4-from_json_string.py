@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Write to a file using append """
+""" Write a file """
 
 
 def append_write(filename="", text=""):
