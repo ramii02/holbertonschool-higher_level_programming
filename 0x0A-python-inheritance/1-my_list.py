@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""Write a class MyList"""
-
+""" subclass of list """
 
 class MyList(list):
-    """  that inherits from list """
+    """ display sorted list """
 
     def print_sorted(self):
-        print(sorted(self))
+        """ sorts list and print """
+        n_list = self[:]
+        n_list.sort()
+        print(n_list)
