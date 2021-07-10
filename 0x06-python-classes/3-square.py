@@ -3,7 +3,9 @@
 
 
 class Square:
-    """initialize square with size"""
+    """Defines a square by size.
+    Attributes:
+        size (int): square size"""
 
     def __init__(self, size=0):
         """initialize square with variables"""
@@ -15,5 +17,7 @@ class Square:
             raise TypeError("size must be an integer")
 
     def area(self):
-        """to find area of square"""
+        """Calculates the square area.
+        Returns:
+        int: the current square area."""
         return self.__size * self.__size
