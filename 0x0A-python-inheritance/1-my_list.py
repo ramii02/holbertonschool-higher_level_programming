@@ -2,7 +2,7 @@
 """ subclass of list """
 
 class MyList(list):
-    """ display sorted list """
+    """ print sorted list """
 
     def print_sorted(self):
         """ sorts list and print """
