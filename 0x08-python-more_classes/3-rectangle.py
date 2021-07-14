@@ -1,48 +1,64 @@
 #!/usr/bin/python3
-""" Rectangle that defines a rectangle by: (based on 2-rectangle.py) """
+'''Simple Rectangle'''
+
 
 class Rectangle:
-    """ Write a class Rectangle that defines a rectangle """
-
+    '''Rectangle Class - empty'''
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        '''initializes the width and height
+        '''
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
+        ''' gets the width'''
         return self.__width
 
     @width.setter
     def width(self, value):
-        if isinstance(value, int) is not True:
+        '''sets the width '''
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
+        else:
+            self.__width = value
 
     @property
     def height(self):
+        '''gets the height'''
         return self.__height
 
     @height.setter
     def height(self, value):
-        if isinstance(value, int) is not True:
+        '''sets the height'''
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        else:
+            self.__height = value
 
     def area(self):
-        return self.__height * self.__width
+        '''method to find the area of a rectangle'''
+        return self.__width * self.__height
 
     def perimeter(self):
-        return 2 * self.__height + 2 * self.__width
+        '''return perimeter rectangle'''
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        if self.__height <= 0 or self.__width <= 0:
+        '''string representation of a rectangle'''
+        a = ""
+        if self.__width == 0 or self.__height == 0:
             return ""
-        str_h = ""
-        for i in range(self.__height):
-            str_h += "#" * self.__width
-            str_h += '\n'
-        return str_h[:-1]
+        while h in range(self.__height):
+            for w in range(self.__width):
+                a = a + '#'
+            if h != self.__height - 1:
+                a = a + '\n'
+        return a
