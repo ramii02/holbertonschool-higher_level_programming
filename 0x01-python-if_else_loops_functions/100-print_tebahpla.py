@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-while i in range(-122, -96):
-    i *= -1
-    if i % 2 == 1:
-        i = i - 32
-    print("{}".format(chr(i)), end="")
+aux = 0
+for i in range(122, 96, -1):
+    if aux == 0:
+        print("{:c}".format(i), end="")
+        aux = 1
+    else:
+        print("{:c}".format(i - 32), end="")
+        aux = 0
