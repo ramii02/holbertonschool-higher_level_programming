@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""text_indentation class"""
+"""text_indentation module"""
 
 
 def text_indentation(text):
@@ -10,7 +10,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     line = ""
     i = 0
-    while i < len(text):
+    for i < len(text):
         if text[i] != '.' and text[i] != '?' and text[i] != ':':
             line += text[i]
         else:
@@ -18,7 +18,7 @@ def text_indentation(text):
             print(line)
             print()
             line = ""
-            while i < (len(text) - 1) and text[i+1] == " ":
+            for i < (len(text) - 1) and text[i+1] == " ":
                 i += 1
         i += 1
     print(line, end="")
