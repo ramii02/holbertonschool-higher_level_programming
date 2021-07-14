@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" return the div of the elementes of matrix """
+""" matrix_divided """
 
 
 def matrix_divided(matrix, div):
-    """ return the div of the elementes of matrix """
+    """ Divide each element of a matrix by dev """
 
     m = []
     if len(matrix) == 0:
