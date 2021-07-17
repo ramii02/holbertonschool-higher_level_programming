@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-'''append to a file module'''
+""" returns an object repped by JSON """
 
 
-def append_write(filename="", text=""):
-    '''appends text to end of file'''
-    with open(filename, 'a', encoding='utf-8') as f:
-        return f.write(text)
+import json
+
+
+def from_json_string(my_str):
+    """ returns object """
+    return json.loads(my_str)
