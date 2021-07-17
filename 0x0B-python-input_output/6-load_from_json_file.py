@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-import json
+"""load from json module """
 
 
 def load_from_json_file(filename):
-    with open(filename, mode='r') as jfile:
-        return json.loads(jfile.read())
+    """function that creates an obj """
+    import json
+    with open(filename, mode="r", encoding='utf-8') as f:
+        return json.load(f)
