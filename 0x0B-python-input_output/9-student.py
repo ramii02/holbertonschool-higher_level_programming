@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-""" Import , sys and own functions """
-from sys import argv
-import json
-save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
+'''Student to JSON module'''
 
-try:
-    j_list = load_from_json_file('add_item.json')
-except:
-    j_list = []
 
-for i in range(1, len(argv)):
-    j_list.append(argv[i])
+class Student:
+    '''class student'''
+    def __init__(self, first_name, last_name, age):
+        '''itialize atribute first_name, last_name, age'''
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-save_to_json_file(j_list, 'add_item.json')
+    def to_json(self):
+        '''return a private dictionary'''
+        return self.__dict__
