@@ -1,13 +1,43 @@
-``text_indentation`` module
-===========================
+The ``5-text_indentation`` module
+======================
 
 Using ``text_indentation``
---------------------------
+-------------------
 
->>> text_indentation = __import__('5-text_indentation').text_indentation
+This is an example text file in reStructuredText format.  First import
+``text_indentation`` from the ``5-text_indentation`` module:
 
->>> text_indentation("My name is Yashey. Whats yours?")
-My name is Yashey.
-<BLANKLINE>
-Whats yours?
-<BLANKLINE>
+    >>> tester = __import__('5-text_indentation')
+
+Now use it:
+
+    >>> tester.text_indentation("Primera Linea. Segunda Linea")
+    Primera Linea.
+    <BLANKLINE>
+    Segunda Linea
+
+    >>> tester.text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> tester.text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> tester.text_indentation(123)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> tester.text_indentation("Holberton.School")
+    Holberton.
+    <BLANKLINE>
+    School
+
+    >>> tester.text_indentation("Holberton.School? How are you:            John")
+    Holberton.
+    <BLANKLINE>
+    School?
+    <BLANKLINE>
+    How are you:
+    <BLANKLINE>
+    John
