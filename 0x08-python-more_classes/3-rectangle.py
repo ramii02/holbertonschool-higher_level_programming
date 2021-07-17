@@ -1,23 +1,35 @@
 #!/usr/bin/python3
-'''Simple Rectangle'''
+"""defining a class Square"""
 
 
 class Rectangle:
-    '''Rectangle Class - empty'''
+    """
+    Rectangle Class
+    Args:
+        width (int): Rectangle width.
+        heigth (int): Rectangle height
+    """
+
     def __init__(self, width=0, height=0):
-        '''initializes the width and height
-        '''
-        self.width = width
+        """
+        docstring on the __init__ method.
+        Note:
+            Do not include the `self` parameter in the ``Args`` section.
+        Args:
+            width (int): Rectangle width.
+            heigth (int): Rectangle height
+        """
         self.height = height
+        self.width = width
 
     @property
     def width(self):
-        ''' gets the width'''
+        """ Width getter """
         return self.__width
 
     @width.setter
     def width(self, value):
-        '''sets the width '''
+        """ width setter """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -27,12 +39,12 @@ class Rectangle:
 
     @property
     def height(self):
-        '''gets the height'''
+        """ height getter """
         return self.__height
 
     @height.setter
     def height(self, value):
-        '''sets the height'''
+        """ height setter """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -41,24 +53,37 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        '''method to find the area of a rectangle'''
+        """
+        Area method
+        Args:
+            width: The first parameter.
+            height: The second parameter.
+        Returns:
+            Area of the rectangle.
+        """
         return self.__width * self.__height
 
     def perimeter(self):
-        '''return perimeter rectangle'''
+        """
+        Perimeter method
+        Args:
+            width: The first parameter.
+            height: The second parameter.
+        Returns:
+            Perimeter of the rectangle.
+        """
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return (self.__width * 2) + (self.__height * 2)
+            return (2 * self.__width) + (2 * self.__height)
 
     def __str__(self):
-        '''string representation of a rectangle'''
-        a = ""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        while h in range(self.__height):
-            for w in range(self.__width):
-                a = a + '#'
-            if h != self.__height - 1:
-                a = a + '\n'
-        return a
+        """
+        String of the Rectangle
+        Returns:
+            The String of the rectangle.
+        """
+        r = ""
+        if self.__height != 0 and self.__width != 0:
+            r += '\n'.join(("#" * self.__width) for j in range(self.__height))
+        return r
