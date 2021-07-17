@@ -1,15 +1,20 @@
 #!/usr/bin/python3
-'''Student to JSON module'''
+'''Load, add, save module'''
+
+import sys
+import json
 
 
-class Student:
-    '''class student'''
-    def __init__(self, first_name, last_name, age):
-        '''itialize atribute first_name, last_name, age'''
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
+save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
-    def to_json(self):
-        '''return a private dictionary'''
-        return self.__dict__
+
+filename = 'add_item.json'
+try:
+    new = load_from_json_file(filename)
+except:
+    new = []
+finally:
+    for i in range(1, len(sys.argv)):
+        new.append(sys.argv[i])
+    save_to_json_file(new, filename)
