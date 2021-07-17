@@ -1,15 +1,8 @@
 #!/usr/bin/python3
-'''read lines module'''
+""" function that appends a string at the end of a text """
 
 
-def read_lines(filename="", nb_lines=0):
-    '''read nb_lines number of lines from filename'''
-    i = 0
-    with open(filename, 'r', encoding='utf-8') as f:
-        if nb_lines <= 0:
-            print(f.read(), end="")
-        else:
-            for line in f:
-                if i < nb_lines:
-                    print(line, end="")
-                i = i + 1
+def append_write(filename="", text=""):
+    """ appends string to end of text file """
+    with open(filename, mode='a', encoding='utf-8') as f:
+        return f.write(text)
