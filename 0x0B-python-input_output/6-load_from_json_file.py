@@ -1,11 +1,20 @@
 #!/usr/bin/python3
-'''Create object from JSON file module'''
+"""
+This module loads a Python object from a JSON file
+"""
 
 
-import json
+from json import JSONDecoder
 
 
 def load_from_json_file(filename):
-    '''create an object from a json file'''
-    with open(filename, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    """
+    Returns object from JSON file
+    Args:
+        filename (str): The name of the file
+    """
+    if type(filename) is not str:
+        raise TypeError("filename must be a string")
+    with open(filename, encoding="utf-8") as json_file:
+        obj_str = json_file.read()
+    return JSONDecoder().decode(obj_str)
