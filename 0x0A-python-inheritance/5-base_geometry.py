@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-""" basegeometry class """
+"""class BaseGeometry"""
 
 
 class BaseGeometry:
-    """ calculations """
-
+    """
+    empty class BaseGeometry
+    Args:
+    """
     pass
