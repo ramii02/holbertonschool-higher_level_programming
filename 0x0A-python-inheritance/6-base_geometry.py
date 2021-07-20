@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-""" Write a class  """
+"""initializing empty class BaseGeometry"""
 
 
 class BaseGeometry:
-    """ Raise an exception """
+    """
+    BaseGeometry class
+    """
     def area(self):
-        raise Exception('area() is not implemented')
+        raise Exception("area() is not implemented")
