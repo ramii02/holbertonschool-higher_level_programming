@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""class BaseGeometry"""
+"""
+5-base_geometry.py
+"""
 
 
 class BaseGeometry:
     """
-    empty class BaseGeometry
-    Args:
+    empty
     """
+
     pass
