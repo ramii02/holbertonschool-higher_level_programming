@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-""" Write a function """
+"""add attribute module"""
 
 
-def add_attribute(object, attr_name, value):
-    """  adds a new attribute if its possible """
-    if "__slots__" in dir(object) or hasattr(object, "__dict__") is False:
+def add_attribute(mc, name, value):
+    """add attribute """
+    if not name or not value:
         raise TypeError("can't add new attribute")
-    else:
-        setattr(obj, name, value)
+    if hasattr(mc, '__dict__') is False:
+        raise TypeError("can't add new attribute")
+    setattr(mc, name, value)
